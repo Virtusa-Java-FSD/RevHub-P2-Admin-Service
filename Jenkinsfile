@@ -62,14 +62,6 @@ pipeline {
             }
         }
 
-        // stage('SonarQube Analysis') {
-        //     steps {
-        //         withSonarQubeEnv('SonarCloud') {
-        //             bat 'mvn sonar:sonar'
-        //         }
-        //     }
-        // }
-
         stage("Deploy to EC2") {
             steps {
                 sshPublisher(
